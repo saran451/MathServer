@@ -1,5 +1,5 @@
 # Ex.03 Design a Website for Server Side Processing
-## Date:
+## Date:12/11/2026
 
 ## AIM:
 To create a web page to calculate Churn Rate using server-side scripts.
@@ -42,13 +42,49 @@ Render the result to the HTML template.
 Publish the website in Localhost.
 
 ## PROGRAM:
+```
+<html>
+    <head>
+        <title>Churn rate </title>
+        </head>
+        <body bgcolor="PURPLE">
+            <h1 align="center">CHURN RATE CALCULATOR</h1>
+            <h2 align="center">SARAN N K</h2>
+            <h3 align="center">26018367</h3>
+            <form method="POST">
+            {%csrf_token %}<br><br>
+                
 
+       <B> <label>INITIAL CUSTOMER=</label></B>
+        <input type="number" name="initial_cust" value="{{l}}" ><br><br>
+
+        <B><label>PRESENT CUSTOMER=</label></B>
+        <input type="number" name="present_cust" value="{{i}}" ><br><br>
+
+        <B><input type="submit" value="Calculate"><br><br></B>
+
+        <label>CHURN RATE=</label>
+        <input type="number" value="{{churnrate}}"><br><br>
+
+            </form>
+        </body>
+
+urls.py
+
+from django.contrib import admin
+from django.urls import path
+from myapp import views
+
+urlpatterns = [
+    path('', views.churn_rate, name='churn_rate'),
+]
+```
 
 ## OUTPUT - SERVER SIDE:
-
+![alt text](<Screenshot (28).png>)
 
 ## OUTPUT - WEBPAGE:
-
+![alt text](<Screenshot (27).png>)
 
 ## RESULT:
 The the web page to calculate Churn Rate using server-side scripts is created successfully.
