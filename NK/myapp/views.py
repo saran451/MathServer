@@ -6,9 +6,9 @@ def churn_rate(request):
 
     churnrate = (l/i)*100 if request.method == 'POST' and i != 0 else 0
 
-    print("INITIAL CUSTOMER =", l)
-    print("PRESENT CUSTOMER=", i)
-    print("CHURN RATE =", churnrate)
+    print("InitialCustomer =", l)
+    print("PresentCustomer=", i)
+    print("Churnrate =", churnrate)
 
     return render(
         request,

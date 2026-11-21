@@ -3,23 +3,23 @@
         <title>Churn rate </title>
         </head>
         <body bgcolor="PURPLE">
-            <h1 align="center">CHURN RATE CALCULATOR</h1>
+            <h1 align="center" > CALCULATOR</h1>
             <h2 align="center">SARAN N K</h2>
-            <h3 align="center">26018367</h3>
+            <h3 align="center">(26018367)</h3>
             <form method="POST">
-            {%csrf_token %}<br><br>
-                
-
-       <B> <label>INITIAL CUSTOMER=</label></B>
-        <input type="number" name="initial_cust" value="{{l}}" ><br><br>
-
-        <B><label>PRESENT CUSTOMER=</label></B>
-        <input type="number" name="present_cust" value="{{i}}" ><br><br>
-
-        <B><input type="submit" value="Calculate"><br><br></B>
-
-        <label>CHURN RATE=</label>
-        <input type="number" value="{{churnrate}}"><br><br>
-
+            {%csrf_token %}<br>
+       <B> <label>InitialCustomer=</label></B>
+        <input type="number value" name="initial_cust" value="{{l}}" >
+        <br><br>
+        <B><label>PresentCustomer=</label></B>
+        <input type="number" name="present_cust" value="{{i}}" >
+        <br><br>
+        <B><input type="submit" value="Calculate"></B>
+        <br><br>
+        <label>Churnrate=</label>
+        <input type="number" value="{{churnrate}}"><br>
             </form>
         </body>
+</html>
+
+        
